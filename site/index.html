@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>hello coursera !</title>
-    <link rel="stylesheet" href="style.css">
-	<style>
-    
-    header li {
-        list-style: circle;
-    }
-    a:link, a:visited {
-        text-decoration: underline;
-        background: green;
-        border: 1px solid blue;
-        color: black;
-    }
-    a:hover, a:active {
-        background-color: red;
-        color: purple;
-    }
-    h1{
-        color: red;}
-    p {color: red;}
-    </style>
+<style>
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
 </head>
 <body>
-        <li><a href="https://www.w3schools.com">chapt1</a></li>
-        <li><a href="https://www.google.com">google</a></li>
-<h1 class="me">My First page<h1>
-<body>
-<h2>i try to learn Html , css , javascript<h2>
-    <a>
-    <p>div1</p>
-    <p>div2</p>
-    <p>div3</p>
-    <p>div4</p>
-    <p>div5</p>
-    <p>
-    </a>
-    hi hado miss U ya Asal</p>
-</body>
+
+<h1>Grid Layout</h1>
+
+<p>This grid layout contains six columns and three rows:</p>
+
+<div class="grid-container">
+  <div class="item1">Header</div>
+  <div class="item2">Menu</div>
+  <div class="item3">Main</div>  
+  <div class="item4">Right</div>
+  <div class="item5">Footer</div>
+</div>
+
 </body>
 </html>
